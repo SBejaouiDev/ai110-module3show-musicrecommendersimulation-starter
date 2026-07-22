@@ -9,3 +9,18 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,Desert Satellites,Orbit Bloom,ambient,moody,0.31,64,0.52,0.38,0.90
+12,Weekend Signal,Indigo Parade,indie pop,happy,0.73,121,0.86,0.80,0.29
+13,Afterglow Avenue,Neon Echo,synthwave,happy,0.78,116,0.79,0.76,0.20
+14,Thunder Arcade,Voltline,rock,intense,0.95,158,0.44,0.69,0.08
+15,Notebook Margins,Paper Lanterns,lofi,focused,0.39,74,0.61,0.57,0.83
+16,Velvet Window,Slow Stereo,jazz,relaxed,0.34,88,0.73,0.51,0.91
+17,Victory Sprint,Max Pulse,pop,intense,0.90,136,0.80,0.86,0.07
+18,Cloud Archive,LoRoom,lofi,chill,0.36,76,0.58,0.59,0.80
+19,Glass Harbor,Tidal Frames,electronic,moody,0.67,104,0.47,0.70,0.26
+20,Morning Sketches,Paper Lanterns,folk,relaxed,0.45,96,0.76,0.49,0.87
+21,Metro Bloom,City Lanterns,pop,happy,0.81,126,0.83,0.84,0.16
+22,Deep Work Drift,LoRoom,ambient,focused,0.27,68,0.55,0.43,0.88
+23,Static Crown,Voltline,rock,moody,0.84,144,0.42,0.63,0.12
+24,Late Train Waltz,Slow Stereo,jazz,chill,0.41,92,0.68,0.56,0.84
+25,Chrome Horizon,Neon Echo,electronic,focused,0.69,112,0.57,0.74,0.24
