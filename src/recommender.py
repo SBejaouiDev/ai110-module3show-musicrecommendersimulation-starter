@@ -38,9 +38,11 @@ class Recommender:
     Required by tests/test_recommender.py
     """
     def __init__(self, songs: List[Song]):
+        """Store the song catalog used for recommendations."""
         self.songs = songs
 
     def recommend(self, user: UserProfile, k: int = 5) -> List[Song]:
+        """Return the top k songs ranked by their content-based score."""
         scored_songs = []
 
         for song in self.songs:
@@ -63,6 +65,7 @@ class Recommender:
         return [song for song, score in scored_songs[:k]]
 
     def explain_recommendation(self, user: UserProfile, song: Song) -> str:
+        """Return a readable explanation for why a song matches the user."""
         user_prefs = {
             "favorite_genre": user.favorite_genre,
             "favorite_mood": user.favorite_mood,
@@ -79,11 +82,7 @@ class Recommender:
         return f"Score: {score:.2f}. " + " ".join(reasons)
 
 def load_songs(csv_path: str) -> List[Dict]:
-    """
-    Loads songs from a CSV file.
-    Required by src/main.py
-    """
-    # TODO: Implement CSV loading logic
+    """Load songs from a CSV file and convert numeric fields."""
     songs = []
 
     with open(csv_path, "r") as file:
@@ -102,10 +101,7 @@ def load_songs(csv_path: str) -> List[Dict]:
     return songs
 
 def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
-    """
-    Scores a single song against user preferences.
-    Required by recommend_songs() and src/main.py
-    """
+    """Score one song against a user profile and return reasons."""
     favorite_genre = user_prefs.get("favorite_genre", user_prefs.get("genre", ""))
     favorite_mood = user_prefs.get("favorite_mood", user_prefs.get("mood", ""))
     target_energy = float(user_prefs.get("target_energy", user_prefs.get("energy", 0.5)))
@@ -150,10 +146,7 @@ def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
     return score, reasons
 
 def recommend_songs(user_prefs: Dict, songs: List[Dict], k: int = 5) -> List[Tuple[Dict, float, List[str]]]:
-    """
-    Functional implementation of the recommendation logic.
-    Required by src/main.py
-    """
+    """Return the top k song dictionaries with scores and reasons."""
     scored_songs = []
 
     for song in songs:
